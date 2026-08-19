@@ -1,0 +1,29 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Google Drive Shortcuts / Link files
+*.gsheet
+*.gdoc
+*.gslides
+*.gshortcut
+
+# Office / Excel Temporary Files
+~$*.xlsx
+~$*.xls
+~$*.docx
+~$*.doc
+
+# Node / Web dependencies & logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / Obsidian workspace cache
+.obsidian/workspace.json

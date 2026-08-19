@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Takumi Ichi (匠一) | Presentación Comercial & Portafolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js for Executive Dashboard -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="assets/logo.jpg" alt="Takumi Ichi Logo" class="nav-logo" />
+        <div class="brand-text">
+          <span class="brand-kanji">匠一</span>
+          <span class="brand-name">TAKUMI ICHI</span>
+          <span class="brand-sub">Genuina Comida Asiática</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#brand" class="nav-link active"><i data-lucide="sparkles"></i> Marca</a>
+        <a href="#channels" class="nav-link"><i data-lucide="target"></i> Canales</a>
+        <a href="#products" class="nav-link"><i data-lucide="utensils"></i> Productos</a>
+        <a href="#projections" class="nav-link highlight"><i data-lucide="calculator"></i> Proyección Ventas</a>
+        <a href="#dashboard" class="nav-link"><i data-lucide="trending-up"></i> Métricas & KPIs</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- View Filter Toggle in Navbar -->
+        <div class="nav-filter-switch">
+          <button class="filter-switch-btn active" id="navFilterDevelop" onclick="setPortfolioFilter('develop')">
+            <i data-lucide="rocket"></i> <span>Fase 1 (Desarrollar)</span>
+          </button>
+          <button class="filter-switch-btn" id="navFilterAll" onclick="setPortfolioFilter('all')">
+            <i data-lucide="layers"></i> <span>Todos (29 SKUs)</span>
+          </button>
+        </div>
+
+        <button class="btn btn-outline-sm" id="btnQuickExport" title="Exportar Proyecciones">
+          <i data-lucide="download"></i> <span>Exportar CSV</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="brand">
+      <div class="hero-backdrop"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> LANZAMIENTO EXCLUSIVO FOOD SERVICE MÉXICO
+        </div>
+
+        <h1 class="hero-title">
+          TAKUMI ICHI <span class="kanji-badge">匠一</span>
+        </h1>
+        <p class="hero-subtitle">
+          Auténtico Arte Culinario Oriental Adaptado al Mercado Restaurantero Mexicano
+        </p>
+
+        <div class="value-prop-card">
+          <div class="value-prop-header">
+            <i data-lucide="quote" class="quote-icon"></i>
+            <h3>Nuestra Propuesta de Valor</h3>
+          </div>
+          <p class="value-prop-text">
+            “<strong>Takumi Ichi</strong> es una línea de productos orientales inspirados en las tradiciones culinarias
+            de Asia, con el objetivo de hacerlos accesibles a las cocinas y restaurantes de México. Tenemos un total
+            compromiso en conservar y difundir los sabores auténticos de la cocina oriental, mediante la creación de
+            productos innovadores, con ingredientes y recetas de alta calidad. A un precio competitivo para el mercado
+            restaurantero mexicano.”
+          </p>
+        </div>
+
+        <div class="hero-pillars">
+          <div class="pillar-item">
+            <div class="pillar-icon"><i data-lucide="award"></i></div>
+            <div class="pillar-text">
+              <h4>Autenticidad & Calidad</h4>
+              <p>Fórmulas de perfil profesional inspiradas en recetas tradicionales asiáticas.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon"><i data-lucide="badge-percent"></i></div>
+            <div class="pillar-text">
+              <h4>Rentabilidad Superior</h4>
+              <p>Costeo optimizado para mejorar el margen por platillo en restaurantes.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon"><i data-lucide="package-check"></i></div>
+            <div class="pillar-text">
+              <h4>Formatos Multicanal</h4>
+              <p>Desde squeeze ergonómico de mesa y cocina hasta porrones de 20L.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CANALES Y CLIENTES OBJETIVO -->
+    <section class="section channels-section" id="channels">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">ESTRATEGIA COMERCIAL</span>
+          <h2>Clientes Objetivo & Canales de Distribución</h2>
+          <p>Estructura de comercialización diseñada para maximizar penetración en cada segmento culinario.</p>
+        </div>
+
+        <div class="channels-grid">
+          <!-- Canal 1 -->
+          <div class="channel-card">
+            <div class="channel-icon-wrap chain">
+              <i data-lucide="building-2"></i>
+            </div>
+            <span class="channel-badge">Venta Directa / Distribuidores</span>
+            <h3>Cadenas de Restaurantes</h3>
+            <p class="channel-desc">Cadenas de sushi, comida asiática, dark kitchens y franquicias casual dining con
+              alto consumo recurrente.</p>
+            <div class="channel-focus">
+              <strong>Formatos Clave:</strong>
+              <div class="tag-row">
+                <span class="tag">Garrafa 3.8 L</span>
+                <span class="tag">Porrón 20 L</span>
+                <span class="tag">Squeeze 946 ml</span>
+              </div>
+            </div>
+            <ul class="channel-points">
+              <li><i data-lucide="check"></i> Estandarización de sabor entre sucursales.</li>
+              <li><i data-lucide="check"></i> Alta estabilidad térmica y de emulsión.</li>
+              <li><i data-lucide="check"></i> Abastecimiento programado y precio por volumen.</li>
+            </ul>
+          </div>
+
+          <!-- Canal 2 -->
+          <div class="channel-card featured">
+            <div class="channel-ribbon">Mayor Oportunidad</div>
+            <div class="channel-icon-wrap independent">
+              <i data-lucide="utensils-crossed"></i>
+            </div>
+            <span class="channel-badge">Distribuidores Food Service / Mayoristas</span>
+            <h3>Restaurantes Independientes</h3>
+            <p class="channel-desc">Bistrós, izakayas, barras de ramen, marisquerías fusión y restaurantes locales con
+              servicio a la carta.</p>
+            <div class="channel-focus">
+              <strong>Formatos Clave:</strong>
+              <div class="tag-row">
+                <span class="tag">Squeeze 414 ml</span>
+                <span class="tag">Squeeze 946 ml</span>
+                <span class="tag">Garrafa 3.8 L</span>
+              </div>
+            </div>
+            <ul class="channel-points">
+              <li><i data-lucide="check"></i> Dosificación limpia y rápida en mesa y cocina.</li>
+              <li><i data-lucide="check"></i> Presentación premium que eleva la percepción del comensal.</li>
+              <li><i data-lucide="check"></i> Sin desperdicio ni necesidad de trasvases complejos.</li>
+            </ul>
+          </div>
+
+          <!-- Canal 3 -->
+          <div class="channel-card">
+            <div class="channel-icon-wrap processor">
+              <i data-lucide="factory"></i>
+            </div>
+            <span class="channel-badge">Venta Directa / Distribuidores</span>
+            <h3>Transformadores de Alimentos</h3>
+            <p class="channel-desc">Empacadoras de proteína, fabricantes de kits de comida preparada, marinado cárnico y
+              congelados.</p>
+            <div class="channel-focus">
+              <strong>Formatos Clave:</strong>
+              <div class="tag-row">
+                <span class="tag">Porrón 20 L</span>
+                <span class="tag">Garrafa 3.8 L</span>
+              </div>
+            </div>
+            <ul class="channel-points">
+              <li><i data-lucide="check"></i> Rendimiento por lote y concentración óptima.</li>
+              <li><i data-lucide="check"></i> Cumplimiento NOM, trazabilidad y fichas técnicas.</li>
+              <li><i data-lucide="check"></i> Excelente adherencia en proteínas crudas y cocidas.</li>
+            </ul>
+          </div>
+
+          <!-- Canal 4 -->
+          <div class="channel-card">
+            <div class="channel-icon-wrap catering">
+              <i data-lucide="chef-hat"></i>
+            </div>
+            <span class="channel-badge">Distribuidores Food Service / Mayoristas</span>
+            <h3>Catering & Comedores Industriales</h3>
+            <p class="channel-desc">Empresas de banquetes, hoteles, comedores corporativos y servicios de hospitalidad a
+              gran escala.</p>
+            <div class="channel-focus">
+              <strong>Formatos Clave:</strong>
+              <div class="tag-row">
+                <span class="tag">Garrafa 3.8 L</span>
+                <span class="tag">Porrón 20 L</span>
+              </div>
+            </div>
+            <ul class="channel-points">
+              <li><i data-lucide="check"></i> Control estricto de costo por porción (food cost).</li>
+              <li><i data-lucide="check"></i> Gran versatilidad para menús temáticos asiáticos.</li>
+              <li><i data-lucide="check"></i> Larga vida de anaquel y almacenamiento seguro.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT CATALOG & GALLERY -->
+    <section class="section catalog-section" id="products">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">PORTAFOLIO DE PRODUCTOS</span>
+          <h2>Catálogo de Innovación Takumi Ichi</h2>
+          <p>Explora cada sabor, ficha gastronómica, comparador de formatos e imágenes en restaurante.</p>
+
+          <!-- Main In-Page Filter Selector -->
+          <div class="catalog-view-filter-bar">
+            <button class="catalog-filter-btn active" id="catFilterDevelop" onclick="setPortfolioFilter('develop')">
+              <i data-lucide="check-circle-2"></i>
+              <div class="btn-lbl">
+                <strong>Fase 1: Productos a Desarrollar</strong>
+                <span>14 SKUs Prioritarios (Columna E = 1)</span>
+              </div>
+            </button>
+            <button class="catalog-filter-btn" id="catFilterAll" onclick="setPortfolioFilter('all')">
+              <i data-lucide="layers"></i>
+              <div class="btn-lbl">
+                <strong>Portafolio Completo</strong>
+                <span>29 SKUs (Línea Extendida Total)</span>
+              </div>
+            </button>
+          </div>
+          
+          <div class="active-filter-banner" id="activeFilterBanner">
+            <i data-lucide="info"></i>
+            <span id="activeFilterBannerText">Mostrando <strong>14 productos prioritarios</strong> seleccionados para desarrollo (Fase 1).</span>
+          </div>
+        </div>
+
+        <!-- Flavor Filter Navigation Tabs -->
+        <div class="flavor-tabs" id="flavorTabs">
+          <!-- Injected via JavaScript -->
+        </div>
+
+        <!-- Product Presentation Showcase Card -->
+        <div class="product-showcase" id="productShowcase">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECCIONES DE VENTAS -->
+    <section class="section projections-section" id="projections">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">HERRAMIENTA COMERCIAL</span>
+          <h2>Simulador & Captura de Proyecciones de Venta</h2>
+          <p>Herramienta para que los KAMs registren cuentas clave, volúmenes estimados y probabilidad de éxito.</p>
+        </div>
+
+        <div class="projections-layout">
+          <!-- Form de Registro -->
+          <div class="projection-form-card">
+            <div class="card-title">
+              <i data-lucide="user-plus"></i>
+              <h3>Registrar Prospecto / Cliente</h3>
+            </div>
+
+            <form id="formProjection">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="kamSelect">KAM (Key Account Manager)</label>
+                  <select id="kamSelect" required>
+                    <option value="KAM Food Service" selected>KAM Food Service</option>
+                    <option value="KAM Clientes Especiales">KAM Clientes Especiales</option>
+                    <option value="KAM Mayoristas/Retail">KAM Mayoristas/Retail</option>
+                    <option value="KAM Sureste">KAM Sureste</option>
+                    <option value="Ecommerce">Ecommerce</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="customerName">Nombre del Cliente / Cuenta</label>
+                  <input type="text" id="customerName" placeholder="Ej. Sushi Roll Polanco / Grupo Toks" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="channelSelect">Canal de Venta</label>
+                  <select id="channelSelect" required>
+                    <option value="Cadenas de Restaurantes">Cadena de Restaurantes (Venta directa)</option>
+                    <option value="Transformadores de Alimentos">Transformador de Alimentos (Venta directa)</option>
+                    <option value="Distribuidor Food Service" selected>Distribuidor Food Service</option>
+                    <option value="Distribuidor Mayorista">Distribuidor Mayorista</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Mercado Libre">Mercado Libre</option>
+                    <option value="Tik Tok Shop">Tik Tok Shop</option>
+                    <option value="mrwings.com">mrwings.com</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="probabilitySelect">Probabilidad de Cierre</label>
+                  <select id="probabilitySelect">
+                    <option value="1.0">100% - Cerrado / Confirmado</option>
+                    <option value="0.8" selected>80% - En Cotización Avanzada</option>
+                    <option value="0.5">50% - En Muestreo / Validación</option>
+                    <option value="0.3">30% - Primer Contacto / Prospecto</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="flavorSelect">Producto / Sabor</label>
+                  <select id="flavorSelect" required>
+                    <!-- Injected via JS -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="skuSelect">Presentación / Formato</label>
+                  <select id="skuSelect" required>
+                    <!-- Injected via JS -->
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="annualPieces">Cantidad Anual Proyectada (12 Meses en Pzas)</label>
+                  <div class="input-with-unit">
+                    <input type="number" id="annualPieces" min="1" step="1" placeholder="Ej. 120" required />
+                    <span class="unit-badge">Pzas / Año</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="targetStartDate">Fecha Estimada de Inicio</label>
+                  <input type="month" id="targetStartDate" value="2026-10" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="notesText">Notas Comerciales / Condiciones</label>
+                <textarea id="notesText" rows="2"
+                  placeholder="Observaciones de entrega, menú en el que se usará o condiciones especiales..."></textarea>
+              </div>
+
+              <div class="form-summary-preview" id="formPreview">
+                <!-- Dynamic calculation preview -->
+                <div class="preview-metric">
+                  <span class="label">Volumen Estimado:</span>
+                  <span class="val" id="prevKg">0.0 kg</span>
+                </div>
+                <div class="preview-metric">
+                  <span class="label">Venta Bruta Sugerida:</span>
+                  <span class="val highlight" id="prevMxn">$0 MXN</span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary" id="btnSaveProjection">
+                  <i data-lucide="plus-circle"></i> Agregar a Proyecciones
+                </button>
+                <button type="button" class="btn btn-outline" id="btnLoadDemo">
+                  <i data-lucide="database"></i> Cargar Datos Ejemplo
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Tabla de Proyecciones Activas -->
+          <div class="projections-table-card">
+            <div class="table-header-flex">
+              <div>
+                <div style="display:flex; align-items:center; gap: 10px; margin-bottom: 4px;">
+                  <h3 style="margin-bottom:0;">Pipeline de Cuentas Proyectadas</h3>
+                  <span id="syncStatusBadge" class="tag" style="font-size:0.75rem; padding: 3px 8px; display:inline-flex; align-items:center; gap:5px; background: rgba(16, 185, 129, 0.15); color: #34D399; border-radius: 4px;">
+                    <i data-lucide="cloud-check" style="width:12px; height:12px;"></i> Sincronizado con Google Sheets
+                  </span>
+                </div>
+                <p id="tableCounterText">0 registros activos</p>
+              </div>
+              <div class="table-actions-group">
+                <button class="btn btn-sm btn-outline" id="btnSyncSheets" title="Descargar las últimas cuentas ingresadas por el equipo">
+                  <i data-lucide="refresh-cw"></i> Sincronizar
+                </button>
+                <button class="btn btn-sm btn-success" id="btnExportCSV">
+                  <i data-lucide="file-spreadsheet"></i> Descargar CSV
+                </button>
+                <button class="btn btn-sm btn-danger-outline" id="btnClearData">
+                  <i data-lucide="trash-2"></i> Limpiar Vista
+                </button>
+              </div>
+            </div>
+
+            <div class="table-scroll-container">
+              <table class="data-table" id="projectionsTable">
+                <thead>
+                  <tr>
+                    <th>KAM</th>
+                    <th>Cliente</th>
+                    <th>Canal</th>
+                    <th>Producto</th>
+                    <th>Formato</th>
+                    <th>Pzas/Año</th>
+                    <th>Vol. Kg</th>
+                    <th>Venta Anual</th>
+                    <th>Prob.</th>
+                    <th>Acción</th>
+                  </tr>
+                </thead>
+                <tbody id="projectionsTableBody">
+                  <!-- Injected via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD DE MÉTRICAS & KPIS -->
+    <section class="section dashboard-section" id="dashboard">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">ANALÍTICA DE NEGOCIO</span>
+          <h2>Métricas Ejecutivas & KPIs de Lanzamiento</h2>
+          <p>Consolidación en tiempo real del potencial de mercado según la captura comercial.</p>
+        </div>
+
+        <!-- KPI Cards Grid -->
+        <div class="kpi-cards-grid">
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">VOLUMEN TOTAL ANUAL</span>
+              <div class="kpi-icon"><i data-lucide="package"></i></div>
+            </div>
+            <div class="kpi-value" id="kpiTotalPieces">0 <small>pzas</small></div>
+            <div class="kpi-sub" id="kpiTotalBoxes">0 cajas aprox.</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">MASA TOTAL PROYECTADA</span>
+              <div class="kpi-icon"><i data-lucide="scale"></i></div>
+            </div>
+            <div class="kpi-value" id="kpiTotalKg">0 <small>kg</small></div>
+            <div class="kpi-sub" id="kpiTotalLiters">0 L equivalentes</div>
+          </div>
+
+          <div class="kpi-card highlight-card">
+            <div class="kpi-header">
+              <span class="kpi-title">VALOR DE VENTA TOTAL</span>
+              <div class="kpi-icon"><i data-lucide="dollar-sign"></i></div>
+            </div>
+            <div class="kpi-value" id="kpiTotalRevenue">$0 <small>MXN</small></div>
+            <div class="kpi-sub" id="kpiWeightedRevenue">Ponderado: $0 MXN</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">PRECIO PROMEDIO / KG</span>
+              <div class="kpi-icon"><i data-lucide="tag"></i></div>
+            </div>
+            <div class="kpi-value" id="kpiAvgPriceKg">$0.00 <small>/kg</small></div>
+            <div class="kpi-sub">Ponderado en portafolio</div>
+          </div>
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3><i data-lucide="pie-chart"></i> Participación por Formato (% Volumen)</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chartFormatMix"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3><i data-lucide="bar-chart-3"></i> Distribución de Venta por Canal ($ MXN)</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chartChannelRevenue"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card full-width">
+            <div class="chart-header">
+              <h3><i data-lucide="bar-chart-2"></i> Volumen Anual por Producto (Kg)</h3>
+            </div>
+            <div class="chart-body">
+              <canvas id="chartProductVolume"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKU Metrics Breakdown Table -->
+        <div class="ranking-card" style="margin-bottom: 2.5rem;">
+          <div class="ranking-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h3><i data-lucide="boxes"></i> Desglose de Métricas y Ventas por SKU</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Monitoreo de volumen proyectado (Pzas / Cajas / Kg) y valor económico por cada presentación individual.</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <span class="tag" id="skuMetricsViewTag" style="background: rgba(16,185,129,0.15); color: #34D399; font-weight:700;">14 SKUs Fase 1</span>
+              <button class="btn btn-sm btn-outline" id="btnExportSkuCSV">
+                <i data-lucide="download"></i> Exportar Resumen SKU
+              </button>
+            </div>
+          </div>
+
+          <div class="table-scroll-container">
+            <table class="data-table" id="skuMetricsTable">
+              <thead>
+                <tr>
+                  <th>Código SKU</th>
+                  <th>Producto / Sabor</th>
+                  <th>Presentación</th>
+                  <th>Estatus</th>
+                  <th>Precio Unit.</th>
+                  <th>Cont. Neto</th>
+                  <th>Volumen (Pzas)</th>
+                  <th>Cajas Est.</th>
+                  <th>Volumen (Kg)</th>
+                  <th>Monto Venta ($ MXN)</th>
+                  <th>Venta Ponderada</th>
+                  <th>% Participación</th>
+                </tr>
+              </thead>
+              <tbody id="skuMetricsTableBody">
+                <!-- Injected via JS -->
+              </tbody>
+              <tfoot id="skuMetricsTableFoot" style="font-weight: 700; background: var(--bg-surface); border-top: 2px solid var(--border-card);">
+                <!-- Injected via JS -->
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- Top Clients Ranking Table -->
+        <div class="ranking-card">
+          <div class="ranking-header">
+            <h3><i data-lucide="trophy"></i> Top 10 Cuentas con Mayor Potencial de Facturación</h3>
+          </div>
+          <div class="table-scroll-container">
+            <table class="data-table" id="topClientsTable">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Cliente</th>
+                  <th>Canal</th>
+                  <th>KAM</th>
+                  <th>Volumen (Pzas)</th>
+                  <th>Volumen (Kg)</th>
+                  <th>Venta Proyectada</th>
+                  <th>Venta Ponderada</th>
+                </tr>
+              </thead>
+              <tbody id="topClientsBody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="Logo Takumi Ichi" class="footer-logo" />
+        <p><strong>TAKUMI ICHI (匠一)</strong> — Línea Profesional de Salsas Orientales.</p>
+        <p class="copyright">Tecnofood Mr. Wings © 2026. Todos los derechos reservados. Uso exclusivo interno para
+          Desarrollo, Ventas y Mercadotecnia.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#brand">Identidad de Marca</a>
+        <a href="#channels">Canales Objetivo</a>
+        <a href="#products">Catálogo de Salsas</a>
+        <a href="#projections">Proyección Comercial</a>
+        <a href="#dashboard">Dashboard Ejecutivo</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Application Logic -->
+  <script src="app.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
