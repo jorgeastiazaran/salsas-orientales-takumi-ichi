@@ -698,7 +698,7 @@ async function loadStoredProjections() {
     const res = await fetch(GOOGLE_SHEETS_WEBHOOK_URL, { method: "GET" });
     if (res.ok) {
       const liveData = await res.json();
-      if (Array.isArray(liveData) && liveData.length > 0) {
+      if (Array.isArray(liveData)) {
         projections = liveData;
         saveLocalCache();
         renderProjectionsTable();
@@ -709,12 +709,12 @@ async function loadStoredProjections() {
       }
     }
   } catch (err) {
-    console.warn("Google Sheets fetch error (falling back to cache/demo):", err);
+    console.warn("Google Sheets fetch error (falling back to cache):", err);
   }
 
-  // 3. Fallback if empty or failed
-  if (projections.length === 0) {
-    projections = [...FALLBACK_DEMO_PROJECTIONS];
+  // 3. Fallback only if fetch failed completely and no projections cached
+  if (!projections || projections.length === 0) {
+    projections = [];
   }
   saveLocalCache();
   renderProjectionsTable();
