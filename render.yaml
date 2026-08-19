@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: takumi-ichi-presentacion
+    env: node
+    rootDir: "Stage-gate CONCEPTO/Presentacion Takumi Ichi"
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
